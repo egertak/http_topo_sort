@@ -21,7 +21,7 @@ init(Req, _Opts) ->
       200,
       #{<<"content-type">> => <<"application/json">>},
       jsone:encode(#{<<"tasks">> => Sorted,
-                     <<"script">> => script(Sorted, <<>>)}),
+                     <<"script">> => script(Sorted, <<"#!/usr/bin/env bash\n">>)}),
       Req1),
   {ok, Req2, undefined}.
 

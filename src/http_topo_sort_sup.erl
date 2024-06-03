@@ -25,7 +25,7 @@ init([]) ->
     ]}
   ]),
   {ok, _} = cowboy:start_clear(http_listener,
-    [{port, 8080}],
+    [{port, 8081}],
     #{env => #{dispatch => Dispatch}}
   ),
   {ok, {{one_for_one, 1, 5}, []}}.
